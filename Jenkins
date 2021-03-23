@@ -28,7 +28,6 @@ pipeline{
                 withCredentials([string(credentialsId: 'docker-hub', variable: 'dockerHubPwd')]) {
                     sh "docker login -u ysadoma -p ${dockerHubPwd}"
                 }
-                
                 sh "docker push ysadoma/newapp:${DOCKER_TAG} "
             }
         }
