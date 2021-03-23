@@ -1,5 +1,5 @@
 ---
-- hosts: dev
+- hosts: ubuntu
   become: True
   tasks:
     - name: Update apt-get repo and cache
